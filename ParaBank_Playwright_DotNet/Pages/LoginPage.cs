@@ -1,7 +1,5 @@
 ﻿using Microsoft.Playwright;
-using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace ParaBank_Playwright_DotNet.Pages
 {
@@ -12,6 +10,7 @@ namespace ParaBank_Playwright_DotNet.Pages
         private readonly string usernameLoc = "//input[@name='username']";
         private readonly string passwordLoc = "//input[@name='password']";
         private readonly string loginButtonLoc = "//input[@value='Log In']";
+        private readonly string accountOverviewHeader = "//h1[@class='title']";
 
         public LoginPage(IPage page)
         {
@@ -31,6 +30,14 @@ namespace ParaBank_Playwright_DotNet.Pages
         public async Task ClickOnLoginButton()
         {
             await page.Locator(loginButtonLoc).ClickAsync();
+        }
+
+        public async Task<bool> IsAccountOverviewHeaderDisplayed()
+        {
+            string text = await page.Locator(accountOverviewHeader).TextContentAsync() ?? string.Empty;
+            Console.WriteLine(text);
+            return text.Trim().Equals("Error!");
+
         }
 
     }
