@@ -14,8 +14,8 @@ namespace ParaBank_Playwright_DotNet.Tests
 
             LoginPage login = new LoginPage(page);
 
-            await login.EnterUsername("xxx");
-            await login.EnterPassword("xxxxxxxxx");
+            await login.EnterUsername("aaa");
+            await login.EnterPassword("aaaaaaaaa");
             await login.ClickOnLoginButton();
             bool actualResult = await login.IsAccountOverviewHeaderDisplayed();
 

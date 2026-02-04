@@ -10,7 +10,7 @@ namespace ParaBank_Playwright_DotNet.Pages
         private readonly string usernameLoc = "//input[@name='username']";
         private readonly string passwordLoc = "//input[@name='password']";
         private readonly string loginButtonLoc = "//input[@value='Log In']";
-        private readonly string accountOverviewHeader = "//h1[@class='title']";
+        private readonly string accountOverviewHeader = "(//h1[@class='title'])[1]";
 
         public LoginPage(IPage page)
         {
@@ -34,9 +34,9 @@ namespace ParaBank_Playwright_DotNet.Pages
 
         public async Task<bool> IsAccountOverviewHeaderDisplayed()
         {
-            string text = await page.Locator(accountOverviewHeader).TextContentAsync() ?? string.Empty;
-            Console.WriteLine(text);
-            return text.Trim().Equals("Error!");
+            string text = await page.Locator(accountOverviewHeader).InnerTextAsync() ?? string.Empty;
+            text.Trim();
+            return text.Equals("Accounts Overview");
 
         }
 
