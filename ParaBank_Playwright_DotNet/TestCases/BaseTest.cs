@@ -1,5 +1,6 @@
 ﻿using Microsoft.Playwright;
 using ParaBank_Playwright_DotNet.Factories;
+using ParaBank_Playwright_DotNet.Utils;
 
 
 namespace ParaBank_Playwright_DotNet.Tests
@@ -8,14 +9,20 @@ namespace ParaBank_Playwright_DotNet.Tests
     {
         private PlaywrightFactory factory = default!;
         public IPage page = default!;
-
+        private Config config = default!;
 
         [SetUp]
 
         public async Task Setup()
         {
+            config = new;
+            string browserName = config?.BrowserSettings?.BrowserName ?? "Unknown";
+            Console.WriteLine(browserName);
+
             factory = new PlaywrightFactory();
-            page = await factory.InitBrowser("Chrome");
+            page = await factory.InitBrowser(browserName);
+
+            
         }
 
         [TearDown]

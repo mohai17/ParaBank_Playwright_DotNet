@@ -4,7 +4,12 @@ using System.Text;
 
 namespace ParaBank_Playwright_DotNet.Utils
 {
-    internal class CSVUtil
+
+   
+    public class CSVUtil
     {
+
+      
+
     }
 }

@@ -1,0 +1,12 @@
+{
+
+  "BrowserSettings": {
+
+    "BrowserName": "Chrome",
+    "Headless": false,
+    "Slowmotion": 0,
+    "Timeout": 30,
+    "URL": "https://parabank.parasoft.com/parabank/index.htm"
+
+  }
+}
