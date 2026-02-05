@@ -12,6 +12,7 @@ namespace ParaBank_Playwright_DotNet.Pages
 
         private readonly string accountOverviewHeader = "(//h1[@class='title'])[1]";
         private readonly string registerSucceedWelcomeMsg = "//h1[@class='title']";
+        private readonly string logoutLinkLoc = "//a[normalize-space()='Log Out']";
 
         public Dashboard(IPage page)
         {
@@ -33,5 +34,9 @@ namespace ParaBank_Playwright_DotNet.Pages
             return text.Contains("Welcome");
         }
 
+        public async Task ClickOnLogoutLink()
+        {
+            await page.Locator(logoutLinkLoc).ClickAsync();
+        }
     }
 }

@@ -10,7 +10,7 @@ namespace ParaBank_Playwright_DotNet.Pages
         private readonly string usernameLoc = "//input[@name='username']";
         private readonly string passwordLoc = "//input[@name='password']";
         private readonly string loginButtonLoc = "//input[@value='Log In']";
-
+        private readonly string customerLoginHeaderLoc = "//h2[normalize-space()='Customer Login']";
 
         public LoginPage(IPage page)
         {
@@ -30,6 +30,11 @@ namespace ParaBank_Playwright_DotNet.Pages
         public async Task ClickOnLoginButton()
         {
             await page.Locator(loginButtonLoc).ClickAsync();
+        }
+
+        public async Task<bool> IsCustomerLoginVisible()
+        {
+            return await page.Locator(customerLoginHeaderLoc).IsVisibleAsync();
         }
 
 
