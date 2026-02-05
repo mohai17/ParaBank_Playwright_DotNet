@@ -12,16 +12,15 @@ namespace ParaBank_Playwright_DotNet.Factories
         public IBrowser browser = default!;
         public IBrowserContext context = default!;
         public IPage page = default!;
-        private Config config = default!;
+        private JSONUtil config = default!;
       
 
         public async Task<IPage> InitBrowser(string browserName)
         {
-            config = new Config();
-            bool? headless = config?.BrowserSettings?.Headless ?? false;
-            int? slomotion = config?.BrowserSettings?.Slowmotion ?? 0;
-            int? timeout = config?.BrowserSettings?.Timeout ?? 30;
-            string URL = config?.BrowserSettings?.URL ?? "Unknown";
+            config = new JSONUtil();
+            bool? headless = config?.LoadConfig()?.BrowserSettings?.Headless ?? default;
+            int? slomotion = config?.LoadConfig()?.BrowserSettings?.Slowmotion ?? default;
+            string URL = config?.LoadConfig()?.BrowserSettings?.URL ?? string.Empty;
 
 
             playwright = await Playwright.CreateAsync();
@@ -29,11 +28,12 @@ namespace ParaBank_Playwright_DotNet.Factories
             switch (browserName.ToLower())
             {
                 case "chrome":
-                    browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
-                    {
+                    browser = await playwright.Chromium.LaunchAsync(new()
+                    {           
+                        Channel = "chrome",
                         Headless = headless,
-                        Channel = browserName,
-                        Timeout = timeout
+                        SlowMo = slomotion,
+                  
                         
                     });
                     break;
@@ -41,8 +41,11 @@ namespace ParaBank_Playwright_DotNet.Factories
                 case "edge":
                     browser = await playwright.Chromium.LaunchAsync(new()
                     {
-                        Headless = false,
-                        Channel = "msedge"
+           
+                        Channel = "msedge",
+                        Headless = headless,
+                        SlowMo = slomotion,
+                  
 
                     });
                     break;
@@ -50,21 +53,27 @@ namespace ParaBank_Playwright_DotNet.Factories
                 case "firefox":
                     browser = await playwright.Firefox.LaunchAsync(new()
                     {
-                        Headless = false
+                        Headless = headless,
+                        SlowMo = slomotion,
+      
                     });
                     break;
 
                 case "safari":
                     browser = await playwright.Webkit.LaunchAsync(new()
                     {
-                        Headless = false
+                        Headless = headless,
+                        SlowMo = slomotion,
+                      
                     });
                     break;
 
                 case "chromium":
                     browser = await playwright.Chromium.LaunchAsync(new()
                     {
-                        Headless = false
+                        Headless = headless,
+                        SlowMo = slomotion,
+                     
                     });
                     break;
 
