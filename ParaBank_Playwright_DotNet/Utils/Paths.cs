@@ -11,7 +11,7 @@ namespace ProjectUtilityPaths
         public static string DataXLSXPath(string XLName)
         {
             string projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\.."));
-            string localfilePath = Path.Combine(projectRoot, "TestData", $"{XLName}");
+            string localfilePath = Path.Combine(projectRoot, "Resources/TestData", $"{XLName}");
 
             return localfilePath;
         }
