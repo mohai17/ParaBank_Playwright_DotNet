@@ -1,6 +1,15 @@
 ﻿
-using System.Data;
 using ExcelDataReader;
+using ProjectUtilityExcel;
+using System.Data;
+
+
+//Usage Example:
+//System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+//ExcelReaderUtil.PopulateInCollection(excelpath, "LoginData");
+//var rowNumber = 1;
+//var username = ExcelReaderUtil.ReadData(rowNumber, "Username") ?? string.Empty;
+//var password = ExcelReaderUtil.ReadData(rowNumber, "Password") ?? string.Empty;
 
 namespace ProjectUtilityExcel
 {
