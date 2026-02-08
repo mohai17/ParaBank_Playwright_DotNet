@@ -1,6 +1,6 @@
 ﻿using Microsoft.Playwright;
 using ParaBank_Playwright_DotNet.Factories;
-using ParaBank_Playwright_DotNet.Utils;
+using ProjectUtilityJSON;
 
 
 namespace ParaBank_Playwright_DotNet.TestCases;
@@ -15,6 +15,7 @@ public class BaseTest
 
     public async Task Setup()
     {
+        System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
         config = new JSONUtil();
         string browserName = config?.LoadConfig()?.BrowserSettings?.BrowserName ?? string.Empty;
         Console.WriteLine(browserName);
