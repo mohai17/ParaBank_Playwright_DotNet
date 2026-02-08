@@ -1,21 +1,29 @@
 ﻿using ParaBank_Playwright_DotNet.Pages;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using ProjectUtilityExcel;
+using ProjectUtilityPaths;
+
 
 namespace ParaBank_Playwright_DotNet.TestCases;
 
 internal class TC_002_Check_that_login_functionality_is_working_correctly:BaseTest
 {
+
+    private readonly string excelpath = Paths.DataXLSXPath("ParaBankTestData.xlsx");
+
     [Test]
 
     public async Task TS_001_user_wants_to_login_with_valid_username_and_password()
     {
 
+        ExcelReaderUtil.PopulateInCollection(excelpath, "RegisterData");
+        var rowNumber = 1;
+        string username = ExcelReaderUtil.ReadData(rowNumber, "Username") ?? string.Empty;
+        string password = ExcelReaderUtil.ReadData(rowNumber, "Password") ?? string.Empty;
+
         LoginPage login = new LoginPage(page);
 
-        await login.EnterUsername("aaa");
-        await login.EnterPassword("aaaaaa");
+        await login.EnterUsername(username);
+        await login.EnterPassword(password);
         await login.ClickOnLoginButton();
 
         Dashboard dash = new Dashboard(page);
