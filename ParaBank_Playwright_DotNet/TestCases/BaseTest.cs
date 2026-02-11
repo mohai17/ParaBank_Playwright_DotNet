@@ -4,7 +4,8 @@ using ParaBank_Playwright_DotNet.Factories;
 using ProjectUtilityJSON;
 using ProjectUtilityReporting;
 using ProjectUtilityScreenShot;
-using System.Security.Policy;
+using ProjectLoggerUtil;
+using ProjectUtilityPaths;
 
 
 namespace ParaBank_Playwright_DotNet.TestCases;
@@ -14,6 +15,7 @@ public class BaseTest
     private PlaywrightFactory factory = default!;
     public IPage page = default!;
     private JSONUtil config = default!;
+
 
     [SetUp]
 
@@ -31,8 +33,10 @@ public class BaseTest
         var methodName = TestContext.CurrentContext.Test.MethodName;
 
         ExtentReporting.CreateTest($"{projectName}_Report.html", $"{className ?? "Unknown"}-{methodName ?? "Unknown"}");
-
         ExtentReporting.LogInfo("Browser Setup is started.");
+
+        LoggerUtil.Init(Paths.LoggerPath("Log.log"), Serilog.Events.LogEventLevel.Debug);
+        LoggerUtil.Info("Browser Setup is started.");
 
         factory = new PlaywrightFactory();
         page = await factory.InitBrowser(browserName);
@@ -40,8 +44,11 @@ public class BaseTest
         var url = config?.LoadConfig()?.BrowserSettings?.URL ?? string.Empty;
        
         ExtentReporting.LogInfo("Browser Setup is finished.");
+        LoggerUtil.Info("Browser Setup is finished.");
 
         ExtentReporting.LogInfo($"Goto the url: {url}");
+        LoggerUtil.Info($"Goto the url:{url}");
+        
 
     }
 
@@ -51,6 +58,9 @@ public class BaseTest
     {
         await EndTest();
         ExtentReporting.EndReporting();
+
+        LoggerUtil.Info("Tear Down and Closing the Driver.");
+        LoggerUtil.CloseAndFlush();
 
         page?.CloseAsync();
         factory.context?.CloseAsync();

@@ -1,4 +1,6 @@
 ﻿using Microsoft.Playwright;
+using ProjectLoggerUtil;
+using ProjectUtilityReporting;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -21,6 +23,9 @@ namespace ParaBank_Playwright_DotNet.Pages
 
         public async Task<bool> IsAccountOverviewHeaderDisplayed()
         {
+            ExtentReporting.LogInfo("Checking, Account Overview Header is displaying or not");
+            LoggerUtil.Info("Checking, Account Overview Header is displaying or not");
+
             string text = await page.Locator(accountOverviewHeader).InnerTextAsync() ?? string.Empty;
             text.Trim();
             return text.Equals("Accounts Overview");
@@ -29,6 +34,9 @@ namespace ParaBank_Playwright_DotNet.Pages
 
         public async Task<bool> IsRegisterSucceedWelcomeMsgDisplayed()
         {
+            ExtentReporting.LogInfo("Checking, Welcome Message after registration is displaying or not");
+            LoggerUtil.Info("Checking, Welcome Message after registration is displaying or not");
+
             string text = await page.Locator(registerSucceedWelcomeMsg).InnerTextAsync() ?? string.Empty;
             text.Trim();
             return text.Contains("Welcome");
@@ -36,6 +44,9 @@ namespace ParaBank_Playwright_DotNet.Pages
 
         public async Task ClickOnLogoutLink()
         {
+            ExtentReporting.LogInfo("Click on the logout link");
+            LoggerUtil.Info("Click on the logout link");
+
             await page.Locator(logoutLinkLoc).ClickAsync();
         }
     }
