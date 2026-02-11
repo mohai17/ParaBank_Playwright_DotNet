@@ -1,5 +1,8 @@
 ﻿using AventStack.ExtentReports;
 using AventStack.ExtentReports.Reporter;
+using Microsoft.Playwright;
+using NUnit.Framework.Interfaces;
+using ProjectUtilityScreenShot;
 using System.IO;
 using System.Reflection;
 
@@ -12,8 +15,9 @@ namespace ProjectUtilityReporting
 
         private static ExtentReports StartReporting(string reportName)
         {
-            string projectName = System.Reflection.Assembly.GetEntryAssembly()?.GetName()?.Name ?? string.Empty;
+            string projectName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name ?? string.Empty;
 
+            Console.WriteLine(projectName);
             var path = Path.Combine(
                 Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty,
                 @$"..\..\..\..\{projectName}\Reports\{reportName}"
@@ -61,5 +65,6 @@ namespace ProjectUtilityReporting
         {
             extentTest?.Info(info, MediaEntityBuilder.CreateScreenCaptureFromBase64String(image).Build());
         }
+
     }
 }
