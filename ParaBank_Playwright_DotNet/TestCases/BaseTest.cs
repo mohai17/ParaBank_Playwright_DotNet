@@ -25,13 +25,12 @@ public class BaseTest
         Console.WriteLine(browserName);
 
 
-
+        string projectName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name ?? string.Empty;
         var fullName = TestContext.CurrentContext.Test.ClassName;
         var className = fullName?.Split('.').Last();
-
         var methodName = TestContext.CurrentContext.Test.MethodName;
 
-        ExtentReporting.CreateTest("WebReport.html", $"{className ?? "Unknown"}-{methodName ?? "Unknown"}");
+        ExtentReporting.CreateTest($"{projectName}_Report.html", $"{className ?? "Unknown"}-{methodName ?? "Unknown"}");
 
         ExtentReporting.LogInfo("Browser Setup is started.");
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectUtilityPaths;
+using System;
 using System.IO;
 using System.Text.Json;
 
@@ -20,8 +21,8 @@ public class Config
 
 internal class JSONUtil
 {
-    private readonly string _configPath =
-        "C:\\Users\\mohai\\source\\repos\\ParaBank_Playwright_DotNet\\ParaBank_Playwright_DotNet\\Resources\\Config\\BrowserConfig.json";
+    private readonly string _configPath = Paths.JSONConfigPath("BrowserConfig.json");
+        
 
     public Config LoadConfig()
     {

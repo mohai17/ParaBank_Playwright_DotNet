@@ -30,6 +30,7 @@
 
   <ItemGroup>
     <Folder Include="Logs\" />
+    <Folder Include="Reports\" />
     <Folder Include="Resources\Config\" />
     <Folder Include="Resources\TestData\" />
   </ItemGroup>

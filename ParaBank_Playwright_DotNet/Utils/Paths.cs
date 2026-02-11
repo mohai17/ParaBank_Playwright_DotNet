@@ -16,6 +16,14 @@ namespace ProjectUtilityPaths
             return localfilePath;
         }
 
+        public static string JSONConfigPath(string JsonName)
+        {
+            string projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\.."));
+            string localfilePath = Path.Combine(projectRoot, "Resources/Config", $"{JsonName}");
+
+            return localfilePath;
+        }
+
 
     }
 }
