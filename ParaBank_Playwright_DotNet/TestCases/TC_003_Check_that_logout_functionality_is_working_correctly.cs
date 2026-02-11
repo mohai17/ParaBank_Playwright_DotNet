@@ -16,7 +16,7 @@ namespace ParaBank_Playwright_DotNet.TestCases
         public async Task TS_001_user_wants_to_logout()
         {
             ExcelReaderUtil.PopulateInCollection(excelpath, "RegisterData");
-            var rowNumber = 1;
+            var rowNumber = 2;
             string username = ExcelReaderUtil.ReadData(rowNumber, "Username") ?? string.Empty;
             string password = ExcelReaderUtil.ReadData(rowNumber, "Password") ?? string.Empty;
 

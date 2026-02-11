@@ -16,7 +16,7 @@ internal class TC_002_Check_that_login_functionality_is_working_correctly:BaseTe
     {
 
         ExcelReaderUtil.PopulateInCollection(excelpath, "RegisterData");
-        var rowNumber = 1;
+        var rowNumber = 2;
         string username = ExcelReaderUtil.ReadData(rowNumber, "Username") ?? string.Empty;
         string password = ExcelReaderUtil.ReadData(rowNumber, "Password") ?? string.Empty;
 
