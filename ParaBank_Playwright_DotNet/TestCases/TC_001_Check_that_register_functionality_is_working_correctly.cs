@@ -56,7 +56,7 @@ internal class TC_001_Check_that_register_functionality_is_working_correctly:Bas
         {
 
             LoggerUtil.Error(e.Message);
-         
+            Assert.Fail();
         }
     }
 

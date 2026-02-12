@@ -19,6 +19,7 @@ namespace ParaBank_Playwright_DotNet.Factories
             config = new JSONUtil();
             bool? headless = config?.LoadConfig()?.BrowserSettings?.Headless ?? default;
             int? slomotion = config?.LoadConfig()?.BrowserSettings?.Slowmotion ?? default;
+            int? timeout = config?.LoadConfig()?.BrowserSettings?.Timeout ?? default;
             string URL = config?.LoadConfig()?.BrowserSettings?.URL ?? string.Empty;
 
 
@@ -32,7 +33,7 @@ namespace ParaBank_Playwright_DotNet.Factories
                         Channel = "chrome",
                         Headless = headless,
                         SlowMo = slomotion,
-                  
+                        Timeout = timeout
                         
                     });
                     break;
@@ -44,7 +45,7 @@ namespace ParaBank_Playwright_DotNet.Factories
                         Channel = "msedge",
                         Headless = headless,
                         SlowMo = slomotion,
-                  
+                        Timeout = timeout
 
                     });
                     break;
@@ -54,7 +55,7 @@ namespace ParaBank_Playwright_DotNet.Factories
                     {
                         Headless = headless,
                         SlowMo = slomotion,
-      
+                        Timeout = timeout
                     });
                     break;
 
@@ -63,7 +64,7 @@ namespace ParaBank_Playwright_DotNet.Factories
                     {
                         Headless = headless,
                         SlowMo = slomotion,
-                      
+                        Timeout = timeout
                     });
                     break;
 
@@ -72,7 +73,7 @@ namespace ParaBank_Playwright_DotNet.Factories
                     {
                         Headless = headless,
                         SlowMo = slomotion,
-                     
+                        Timeout = timeout
                     });
                     break;
 

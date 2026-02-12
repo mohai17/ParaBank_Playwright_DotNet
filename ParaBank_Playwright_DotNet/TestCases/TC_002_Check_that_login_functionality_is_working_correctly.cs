@@ -39,6 +39,7 @@ internal class TC_002_Check_that_login_functionality_is_working_correctly:BaseTe
         {
 
             LoggerUtil.Error(e.Message);
+            Assert.Fail();
          
         }
 

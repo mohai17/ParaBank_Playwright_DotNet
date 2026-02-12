@@ -30,19 +30,23 @@ namespace ParaBank_Playwright_DotNet.TestCases
                 await login.ClickOnLoginButton();
 
                 Dashboard dash = new Dashboard(page);
-
-           
-                await dash.ClickOnLogoutLink();
-                
-
-                bool actualResult = await login.IsCustomerLoginVisible();
-
-                Assert.That(actualResult, Is.True);
+ 
+                if(await dash.FindLogoutLink())
+                {
+                    await dash.ClickOnLogoutLink();
+                    bool actualResult = await login.IsCustomerLoginVisible();
+                    Assert.That(actualResult, Is.True);
+                }
+                else
+                {
+                    Assert.Fail();
+                }
+          
             }
             catch (Exception e)
-            {
-
+            {         
                 LoggerUtil.Error(e.Message);
+                Assert.Fail();
             }
         }
 

@@ -58,5 +58,10 @@ namespace ParaBank_Playwright_DotNet.Pages
                
             }
         }
+
+        public async Task<bool> FindLogoutLink()
+        {
+            return await page.Locator(logoutLinkLoc).IsEnabledAsync();
+        }
     }
 }
