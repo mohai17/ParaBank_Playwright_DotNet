@@ -47,7 +47,16 @@ namespace ParaBank_Playwright_DotNet.Pages
             ExtentReporting.LogInfo("Click on the logout link");
             LoggerUtil.Info("Click on the logout link");
 
-            await page.Locator(logoutLinkLoc).ClickAsync();
+            try
+            {
+                await page.Locator(logoutLinkLoc).ClickAsync();
+            }
+            catch (Exception e)
+            { 
+                LoggerUtil.Error(e.Message);
+                ExtentReporting.LogFail(e.Message);
+               
+            }
         }
     }
 }

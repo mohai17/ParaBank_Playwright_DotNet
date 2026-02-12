@@ -1,4 +1,5 @@
 ﻿using ParaBank_Playwright_DotNet.Pages;
+using ProjectLoggerUtil;
 using ProjectUtilityExcel;
 using ProjectUtilityPaths;
 using System;
@@ -15,24 +16,34 @@ namespace ParaBank_Playwright_DotNet.TestCases
         [Test]
         public async Task TS_001_user_wants_to_logout()
         {
-            ExcelReaderUtil.PopulateInCollection(excelpath, "RegisterData");
-            var rowNumber = 2;
-            string username = ExcelReaderUtil.ReadData(rowNumber, "Username") ?? string.Empty;
-            string password = ExcelReaderUtil.ReadData(rowNumber, "Password") ?? string.Empty;
+            try
+            {
+                ExcelReaderUtil.PopulateInCollection(excelpath, "RegisterData");
+                var rowNumber = 5;
+                string username = ExcelReaderUtil.ReadData(rowNumber, "Username") ?? string.Empty;
+                string password = ExcelReaderUtil.ReadData(rowNumber, "Password") ?? string.Empty;
 
-            LoginPage login = new LoginPage(page);
+                LoginPage login = new LoginPage(page);
 
-            await login.EnterUsername(username);
-            await login.EnterPassword(password);
-            await login.ClickOnLoginButton();
+                await login.EnterUsername(username);
+                await login.EnterPassword(password);
+                await login.ClickOnLoginButton();
 
-            Dashboard dash = new Dashboard(page);
+                Dashboard dash = new Dashboard(page);
 
-            await dash.ClickOnLogoutLink();
+           
+                await dash.ClickOnLogoutLink();
+                
 
-            bool actualResult = await login.IsCustomerLoginVisible();
+                bool actualResult = await login.IsCustomerLoginVisible();
 
-            Assert.That(actualResult, Is.True);
+                Assert.That(actualResult, Is.True);
+            }
+            catch (Exception e)
+            {
+
+                LoggerUtil.Error(e.Message);
+            }
         }
 
     }

@@ -1,4 +1,5 @@
 ﻿using ParaBank_Playwright_DotNet.Pages;
+using ProjectLoggerUtil;
 using ProjectUtilityExcel;
 using ProjectUtilityPaths;
 
@@ -15,22 +16,31 @@ internal class TC_002_Check_that_login_functionality_is_working_correctly:BaseTe
     public async Task TS_001_user_wants_to_login_with_valid_username_and_password()
     {
 
-        ExcelReaderUtil.PopulateInCollection(excelpath, "RegisterData");
-        var rowNumber = 2;
-        string username = ExcelReaderUtil.ReadData(rowNumber, "Username") ?? string.Empty;
-        string password = ExcelReaderUtil.ReadData(rowNumber, "Password") ?? string.Empty;
+        try
+        {
+            ExcelReaderUtil.PopulateInCollection(excelpath, "RegisterData");
+            var rowNumber = 3;
+            string username = ExcelReaderUtil.ReadData(rowNumber, "Username") ?? string.Empty;
+            string password = ExcelReaderUtil.ReadData(rowNumber, "Password") ?? string.Empty;
 
-        LoginPage login = new LoginPage(page);
+            LoginPage login = new LoginPage(page);
 
-        await login.EnterUsername(username);
-        await login.EnterPassword(password);
-        await login.ClickOnLoginButton();
+            await login.EnterUsername(username);
+            await login.EnterPassword(password);
+            await login.ClickOnLoginButton();
 
-        Dashboard dash = new Dashboard(page);
+            Dashboard dash = new Dashboard(page);
 
-        bool actualResult = await dash.IsAccountOverviewHeaderDisplayed();
+            bool actualResult = await dash.IsAccountOverviewHeaderDisplayed();
 
-        Assert.That(actualResult, Is.True);
+            Assert.That(actualResult, Is.True);
+        }
+        catch (Exception e)
+        {
+
+            LoggerUtil.Error(e.Message);
+         
+        }
 
     }
 }

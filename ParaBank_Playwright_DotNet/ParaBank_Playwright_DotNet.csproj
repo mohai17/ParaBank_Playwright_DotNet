@@ -39,9 +39,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Logs\ParaBank_Playwright_DotNet_Log20260211.log">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Update="Resources\Config\BrowserConfig.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
