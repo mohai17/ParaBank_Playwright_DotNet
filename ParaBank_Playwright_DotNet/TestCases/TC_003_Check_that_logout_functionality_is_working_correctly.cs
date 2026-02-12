@@ -19,7 +19,7 @@ namespace ParaBank_Playwright_DotNet.TestCases
             try
             {
                 ExcelReaderUtil.PopulateInCollection(excelpath, "RegisterData");
-                var rowNumber = 5;
+                var rowNumber = 1;
                 string username = ExcelReaderUtil.ReadData(rowNumber, "Username") ?? string.Empty;
                 string password = ExcelReaderUtil.ReadData(rowNumber, "Password") ?? string.Empty;
 

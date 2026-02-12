@@ -86,3 +86,38 @@ Call log:
 Call log:
   - waiting for Locator("//a[normalize-space()='Log Out']")
 2026-02-13 02:15:03.263 +06:00 [INF] Tear Down and Closing the Driver.
+2026-02-13 02:17:06.752 +06:00 [INF] Browser Setup is started.
+2026-02-13 02:17:10.871 +06:00 [INF] Browser Setup is finished.
+2026-02-13 02:17:10.872 +06:00 [INF] Goto the url:https://parabank.parasoft.com/parabank/index.htm
+2026-02-13 02:17:10.963 +06:00 [INF] Click on the registration link.
+2026-02-13 02:17:11.463 +06:00 [INF] Enter the first name: Alex
+2026-02-13 02:17:11.589 +06:00 [INF] Enter the last name: Carter
+2026-02-13 02:17:11.625 +06:00 [INF] Enter the address: 123 Maple Street
+2026-02-13 02:17:11.658 +06:00 [INF] Enter the city: Denver
+2026-02-13 02:17:11.693 +06:00 [INF] Enter the state: CO
+2026-02-13 02:17:11.725 +06:00 [INF] Enter the zip code: 80202
+2026-02-13 02:17:11.760 +06:00 [INF] Enter the phone number: (303) 555-0198
+2026-02-13 02:17:11.802 +06:00 [INF] Enter the SSN: 123-45-6789
+2026-02-13 02:17:11.836 +06:00 [INF] Enter the username: Alex
+2026-02-13 02:17:11.870 +06:00 [INF] Enter the password: Passw0rd!
+2026-02-13 02:17:11.899 +06:00 [INF] Enter the confirm password: Passw0rd!
+2026-02-13 02:17:11.912 +06:00 [INF] Click on the registration button
+2026-02-13 02:17:12.356 +06:00 [INF] Checking, Welcome Message after registration is displaying or not
+2026-02-13 02:17:19.344 +06:00 [INF] Tear Down and Closing the Driver.
+2026-02-13 02:17:19.647 +06:00 [INF] Browser Setup is started.
+2026-02-13 02:17:22.880 +06:00 [INF] Browser Setup is finished.
+2026-02-13 02:17:22.881 +06:00 [INF] Goto the url:https://parabank.parasoft.com/parabank/index.htm
+2026-02-13 02:17:22.884 +06:00 [INF] Enter the username: Alex
+2026-02-13 02:17:22.927 +06:00 [INF] Enter the password: Passw0rd!
+2026-02-13 02:17:22.945 +06:00 [INF] Click on the login button
+2026-02-13 02:17:23.923 +06:00 [INF] Checking, Account Overview Header is displaying or not
+2026-02-13 02:17:24.498 +06:00 [INF] Tear Down and Closing the Driver.
+2026-02-13 02:17:24.945 +06:00 [INF] Browser Setup is started.
+2026-02-13 02:17:28.281 +06:00 [INF] Browser Setup is finished.
+2026-02-13 02:17:28.281 +06:00 [INF] Goto the url:https://parabank.parasoft.com/parabank/index.htm
+2026-02-13 02:17:28.288 +06:00 [INF] Enter the username: Alex
+2026-02-13 02:17:28.355 +06:00 [INF] Enter the password: Passw0rd!
+2026-02-13 02:17:28.382 +06:00 [INF] Click on the login button
+2026-02-13 02:17:29.235 +06:00 [INF] Click on the logout link
+2026-02-13 02:17:30.144 +06:00 [INF] Checking, Customer Login Header is visible or not.
+2026-02-13 02:17:30.504 +06:00 [INF] Tear Down and Closing the Driver.
