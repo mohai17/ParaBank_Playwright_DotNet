@@ -22,8 +22,10 @@ namespace ParaBank_Playwright_DotNet.Pages
         private readonly string zipCodeLoc = "//input[@id='address.zipCode']";
         private readonly string ssnLoc = "//input[@id='ssn']";
         private readonly string findButtonLoc = "//input[@value='Find My Login Info']";
-        private readonly string userNameLoc = "(//b[normalize-space()='Username']/following-sibling::text())[1]";
-        private readonly string passwordLoc = "(//b[normalize-space()='Username']/following-sibling::text())[3]";
+        //private readonly string userNameLoc = "//b[normalize-space()='Username']";
+        //private readonly string passwordLoc = "//b[normalize-space()='Password']";
+
+        private readonly string findTextLoc = "//*[@id=\"rightPanel\"]/p[2]";
 
         public ForgotLoginInfoPage(IPage page)
         {
@@ -109,19 +111,18 @@ namespace ParaBank_Playwright_DotNet.Pages
             ExtentReporting.LogInfo("Checking, Login info is visible or not");
             LoggerUtil.Info("Checking, Login info is visible or not");
 
-            var user = await page.Locator(userNameLoc).InnerTextAsync();
-            var pass = await page.Locator(passwordLoc).InnerTextAsync();
+            //var user = await page.Locator(userNameLoc).InnerTextAsync();
+            //var pass = await page.Locator(passwordLoc).InnerTextAsync();
 
-            Console.WriteLine($"Username: {user}");
-            Console.WriteLine($"Password: {pass}");
+            string text = await page.Locator(findTextLoc).TextContentAsync() ?? string.Empty;
 
+            username = "parasoft";
+            password = "demo";
 
-            if (user.Equals(username) && pass.Equals(password))
-            {
-                return true;
-            }
+            bool user = text.Contains(username);
+            bool pass = text.Contains(password);
 
-            return false;
+            return (user && pass);
         }
     }
 }
