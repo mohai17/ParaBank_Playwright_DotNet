@@ -18,8 +18,12 @@ namespace ParaBank_Playwright_DotNet.TestCases
         {
             try
             {
-                ExcelReaderUtil.PopulateInCollection(excelpath, "RegisterData");
-                var rowNumber = 1;
+                string sheetName = "LogoutData";
+                LoggerUtil.Info($"ExcelPath: {excelpath}");
+                LoggerUtil.Info($"Excel Sheet Name: {sheetName}");
+
+                ExcelReaderUtil.PopulateInCollection(excelpath, sheetName);
+                var rowNumber = Convert.ToInt32(ExcelReaderUtil.ReadData(1, "ConfigRow"));
                 string username = ExcelReaderUtil.ReadData(rowNumber, "Username") ?? string.Empty;
                 string password = ExcelReaderUtil.ReadData(rowNumber, "Password") ?? string.Empty;
 
