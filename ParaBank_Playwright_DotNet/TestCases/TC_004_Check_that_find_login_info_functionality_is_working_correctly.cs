@@ -1,4 +1,5 @@
-﻿using NUnit.Framework.Internal;
+﻿using Microsoft.CodeAnalysis.CSharp.Syntax;
+using NUnit.Framework.Internal;
 using ParaBank_Playwright_DotNet.Pages;
 using ProjectLoggerUtil;
 using ProjectUtilityExcel;
@@ -47,6 +48,11 @@ namespace ParaBank_Playwright_DotNet.TestCases
                 await forgot.EnterZipCode(zip);
                 await forgot.EnterSSN(ssn);
                 await forgot.ClickOnFindButton();
+
+
+                username = "parasoft";
+                password = "demo";
+
 
                 bool acutalResult = await forgot.IsLoginInfoVisible(username, password);
 
