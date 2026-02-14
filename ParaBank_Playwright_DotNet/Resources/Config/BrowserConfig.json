@@ -4,7 +4,7 @@
 
     "BrowserName": "Chrome",
     "Headless": false,
-    "Slowmotion": 1000,
+    "Slowmotion": 0,
     "Timeout": 10000,
     "URL": "https://parabank.parasoft.com/parabank/index.htm"
 
