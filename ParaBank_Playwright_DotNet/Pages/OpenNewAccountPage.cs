@@ -36,8 +36,8 @@ namespace ParaBank_Playwright_DotNet.Pages
 
         public async Task SelectAccountType(string AccType)
         {
-            ExtentReporting.LogInfo("Select the account type");
-            LoggerUtil.Info("Select the account type");
+            ExtentReporting.LogInfo($"Select the account type: {AccType}");
+            LoggerUtil.Info($"Select the account type: {AccType}");
 
             await page.Locator(TypeDropDownLoc).SelectOptionAsync(new[] 
             {  
@@ -50,8 +50,8 @@ namespace ParaBank_Playwright_DotNet.Pages
         public async Task SelectFromAccId(int FromAccIndex)
         {
 
-            ExtentReporting.LogInfo("Select From Account ID");
-            LoggerUtil.Info("Select From Account ID");
+            ExtentReporting.LogInfo($"Select From Account ID: {FromAccIndex}");
+            LoggerUtil.Info($"Select From Account ID: {FromAccIndex}");
 
             await page.Locator(FromAccIdLoc).SelectOptionAsync(new[] 
             { 
@@ -80,6 +80,9 @@ namespace ParaBank_Playwright_DotNet.Pages
         {
             ExtentReporting.LogInfo("Checking, New Account Id is visible or not");
             LoggerUtil.Info("Checking, New Account Id is visible or not");
+
+            string accNum = await page.Locator(NewAccIdLoc).TextContentAsync() ?? string.Empty;
+            LoggerUtil.Info($"New Account Id/Number: {accNum}");
 
             return await page.Locator(NewAccIdLoc).IsVisibleAsync();
         }

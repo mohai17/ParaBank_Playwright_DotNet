@@ -62,3 +62,89 @@ Call log:
 2026-02-14 14:44:44.755 +06:00 [INF] Click on open account button
 2026-02-14 14:44:45.834 +06:00 [INF] Checking, New Account Id is visible or not
 2026-02-14 14:44:53.330 +06:00 [INF] Tear Down and Closing the Driver.
+2026-02-14 15:31:06.866 +06:00 [INF] Browser Setup is started.
+2026-02-14 15:31:18.376 +06:00 [INF] Browser Setup is finished.
+2026-02-14 15:31:18.376 +06:00 [INF] Goto the url:https://parabank.parasoft.com/parabank/index.htm
+2026-02-14 15:31:18.578 +06:00 [INF] Click on forgot login info link
+2026-02-14 15:31:19.973 +06:00 [INF] Enter first name: Alex
+2026-02-14 15:31:21.021 +06:00 [INF] Enter last name: Carter
+2026-02-14 15:31:22.059 +06:00 [INF] Enter address: 123 Maple Street
+2026-02-14 15:31:23.077 +06:00 [INF] Enter city name: Denver
+2026-02-14 15:31:24.107 +06:00 [INF] Enter state name: CO
+2026-02-14 15:31:25.125 +06:00 [INF] Enter the zip code: 80202
+2026-02-14 15:31:26.152 +06:00 [INF] Enter the SSN: 123-45-6789
+2026-02-14 15:31:27.183 +06:00 [INF] Click on 'Find My Login Info' button
+2026-02-14 15:31:28.525 +06:00 [INF] Checking, Login info is visible or not
+2026-02-14 15:31:34.094 +06:00 [INF] Target page, context or browser has been closed
+Call log:
+  - waiting for Locator("//*[@id=\"rightPanel\"]/p[2]")
+2026-02-14 15:40:07.173 +06:00 [INF] Browser Setup is started.
+2026-02-14 15:40:11.307 +06:00 [INF] Browser Setup is finished.
+2026-02-14 15:40:11.307 +06:00 [INF] Goto the url:https://parabank.parasoft.com/parabank/index.htm
+2026-02-14 15:40:11.311 +06:00 [ERR] Excel file not found.
+2026-02-14 15:40:16.248 +06:00 [INF] Tear Down and Closing the Driver.
+2026-02-14 15:43:55.432 +06:00 [INF] Browser Setup is started.
+2026-02-14 15:43:59.625 +06:00 [INF] Browser Setup is finished.
+2026-02-14 15:43:59.625 +06:00 [INF] Goto the url:https://parabank.parasoft.com/parabank/index.htm
+2026-02-14 15:43:59.626 +06:00 [INF] ExcelPath:C:\Users\mohai\source\repos\ParaBank_Playwright_DotNet\ParaBank_Playwright_DotNet\Resources/TestData\ParaBankTestData.xlxs
+2026-02-14 15:43:59.628 +06:00 [ERR] Excel file not found.
+2026-02-14 15:44:04.475 +06:00 [INF] Tear Down and Closing the Driver.
+2026-02-14 15:45:16.710 +06:00 [INF] Browser Setup is started.
+2026-02-14 15:45:20.954 +06:00 [INF] Browser Setup is finished.
+2026-02-14 15:45:20.954 +06:00 [INF] Goto the url:https://parabank.parasoft.com/parabank/index.htm
+2026-02-14 15:45:20.955 +06:00 [INF] ExcelPath:C:\Users\mohai\source\repos\ParaBank_Playwright_DotNet\ParaBank_Playwright_DotNet\Resources/TestData\ParaBankTestData.xlsx
+2026-02-14 15:45:20.992 +06:00 [INF] Enter the username: parasoft
+2026-02-14 15:45:22.038 +06:00 [INF] Enter the password: demo
+2026-02-14 15:45:23.071 +06:00 [INF] Click on the login button
+2026-02-14 15:45:25.211 +06:00 [INF] Click on Open New Account Link
+2026-02-14 15:45:26.600 +06:00 [INF] Select the account type: SAVINGS
+2026-02-14 15:45:27.633 +06:00 [INF] Select From Account ID: 0
+2026-02-14 15:45:28.646 +06:00 [INF] Click on open account button
+2026-02-14 15:45:29.692 +06:00 [INF] Checking, New Account Id is visible or not
+2026-02-14 15:45:34.415 +06:00 [INF] Tear Down and Closing the Driver.
+2026-02-14 15:48:10.503 +06:00 [INF] Browser Setup is started.
+2026-02-14 15:48:14.738 +06:00 [INF] Browser Setup is finished.
+2026-02-14 15:48:14.738 +06:00 [INF] Goto the url:https://parabank.parasoft.com/parabank/index.htm
+2026-02-14 15:48:14.741 +06:00 [INF] ExcelPath:C:\Users\mohai\source\repos\ParaBank_Playwright_DotNet\ParaBank_Playwright_DotNet\Resources/TestData\ParaBankTestData.xlsx
+2026-02-14 15:48:14.776 +06:00 [INF] Enter the username: parasoft
+2026-02-14 15:48:15.819 +06:00 [INF] Enter the password: demo
+2026-02-14 15:48:16.853 +06:00 [INF] Click on the login button
+2026-02-14 15:48:18.571 +06:00 [INF] Click on Open New Account Link
+2026-02-14 15:48:19.969 +06:00 [INF] Select the account type: SAVINGS
+2026-02-14 15:48:20.998 +06:00 [INF] Select From Account ID: 0
+2026-02-14 15:48:22.011 +06:00 [INF] Click on open account button
+2026-02-14 15:48:23.056 +06:00 [INF] Checking, New Account Id is visible or not
+2026-02-14 15:48:23.062 +06:00 [INF] New Account Id/Number: 30216
+2026-02-14 15:48:27.661 +06:00 [INF] Tear Down and Closing the Driver.
+2026-02-14 15:48:44.591 +06:00 [INF] Browser Setup is started.
+2026-02-14 15:48:48.646 +06:00 [INF] Browser Setup is finished.
+2026-02-14 15:48:48.646 +06:00 [INF] Goto the url:https://parabank.parasoft.com/parabank/index.htm
+2026-02-14 15:48:48.682 +06:00 [INF] Click on forgot login info link
+2026-02-14 15:48:50.055 +06:00 [INF] Enter first name: Alex
+2026-02-14 15:48:51.097 +06:00 [INF] Enter last name: Carter
+2026-02-14 15:48:52.141 +06:00 [INF] Enter address: 123 Maple Street
+2026-02-14 15:48:53.162 +06:00 [INF] Enter city name: Denver
+2026-02-14 15:48:54.179 +06:00 [INF] Enter state name: CO
+2026-02-14 15:48:55.208 +06:00 [INF] Enter the zip code: 80202
+2026-02-14 15:48:56.223 +06:00 [INF] Enter the SSN: 123-45-6789
+2026-02-14 15:48:57.252 +06:00 [INF] Click on 'Find My Login Info' button
+2026-02-14 15:48:58.595 +06:00 [INF] Checking, Login info is visible or not
+2026-02-14 15:49:00.375 +06:00 [INF] Target page, context or browser has been closed
+Call log:
+  - waiting for Locator("//*[@id=\"rightPanel\"]/p[2]")
+2026-02-14 15:49:15.715 +06:00 [INF] Browser Setup is started.
+2026-02-14 15:49:19.471 +06:00 [INF] Browser Setup is finished.
+2026-02-14 15:49:19.471 +06:00 [INF] Goto the url:https://parabank.parasoft.com/parabank/index.htm
+2026-02-14 15:49:19.506 +06:00 [INF] Click on forgot login info link
+2026-02-14 15:49:20.883 +06:00 [INF] Enter first name: Priya
+2026-02-14 15:49:21.920 +06:00 [INF] Enter last name: Singh
+2026-02-14 15:49:22.949 +06:00 [INF] Enter address: 456 Oak Avenue
+2026-02-14 15:49:23.970 +06:00 [INF] Enter city name: Austin
+2026-02-14 15:49:24.997 +06:00 [INF] Enter state name: TX
+2026-02-14 15:49:26.024 +06:00 [INF] Enter the zip code: 73301
+2026-02-14 15:49:27.053 +06:00 [INF] Enter the SSN: 987-65-4321
+2026-02-14 15:49:28.083 +06:00 [INF] Click on 'Find My Login Info' button
+2026-02-14 15:49:29.411 +06:00 [INF] Checking, Login info is visible or not
+2026-02-14 15:49:45.717 +06:00 [INF] Target page, context or browser has been closed
+Call log:
+  - waiting for Locator("//*[@id=\"rightPanel\"]/p[2]")
