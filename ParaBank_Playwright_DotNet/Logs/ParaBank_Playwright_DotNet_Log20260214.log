@@ -50,3 +50,15 @@
 Call log:
   - waiting for Locator("//*[@id=\"rightPanel\"]/p[2]")
 2026-02-14 14:33:13.123 +06:00 [INF] Tear Down and Closing the Driver.
+2026-02-14 14:44:31.319 +06:00 [INF] Browser Setup is started.
+2026-02-14 14:44:37.084 +06:00 [INF] Browser Setup is finished.
+2026-02-14 14:44:37.085 +06:00 [INF] Goto the url:https://parabank.parasoft.com/parabank/index.htm
+2026-02-14 14:44:37.090 +06:00 [INF] Enter the username: parasoft
+2026-02-14 14:44:38.182 +06:00 [INF] Enter the password: demo
+2026-02-14 14:44:39.233 +06:00 [INF] Click on the login button
+2026-02-14 14:44:41.264 +06:00 [INF] Click on Open New Account Link
+2026-02-14 14:44:42.652 +06:00 [INF] Select the account type
+2026-02-14 14:44:43.720 +06:00 [INF] Select From Account ID
+2026-02-14 14:44:44.755 +06:00 [INF] Click on open account button
+2026-02-14 14:44:45.834 +06:00 [INF] Checking, New Account Id is visible or not
+2026-02-14 14:44:53.330 +06:00 [INF] Tear Down and Closing the Driver.
