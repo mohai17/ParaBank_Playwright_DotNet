@@ -111,13 +111,8 @@ namespace ParaBank_Playwright_DotNet.Pages
             ExtentReporting.LogInfo("Checking, Login info is visible or not");
             LoggerUtil.Info("Checking, Login info is visible or not");
 
-            //var user = await page.Locator(userNameLoc).InnerTextAsync();
-            //var pass = await page.Locator(passwordLoc).InnerTextAsync();
-
             string text = await page.Locator(findTextLoc).TextContentAsync() ?? string.Empty;
 
-            username = "parasoft";
-            password = "demo";
 
             bool user = text.Contains(username);
             bool pass = text.Contains(password);
