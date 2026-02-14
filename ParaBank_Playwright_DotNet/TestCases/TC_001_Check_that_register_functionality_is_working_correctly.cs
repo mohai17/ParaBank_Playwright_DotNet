@@ -17,8 +17,12 @@ internal class TC_001_Check_that_register_functionality_is_working_correctly:Bas
     {
         try
         {
-            ExcelReaderUtil.PopulateInCollection(excelpath, "RegisterData");
-            var rowNumber = 1;
+            string sheetName = "RegisterData";
+            LoggerUtil.Info($"ExcelPath: {excelpath}");
+            LoggerUtil.Info($"Excel Sheet Name: {sheetName}");
+
+            ExcelReaderUtil.PopulateInCollection(excelpath, sheetName);
+            var rowNumber = Convert.ToInt32(ExcelReaderUtil.ReadData(1,"ConfigRow"));
             var firstName = ExcelReaderUtil.ReadData(rowNumber, "FirstName") ?? string.Empty;
             var lastName = ExcelReaderUtil.ReadData(rowNumber, "LastName") ?? string.Empty;
             var address = ExcelReaderUtil.ReadData(rowNumber, "Address") ?? string.Empty;
