@@ -1,10 +1,8 @@
 ﻿using Microsoft.Playwright;
+using NUnit.Framework.Constraints;
 using ProjectLoggerUtil;
 using ProjectUtilityReporting;
-using System;
-using System.Collections.Generic;
-using System.Reflection.Emit;
-using System.Text;
+
 
 namespace ParaBank_Playwright_DotNet.Pages
 {
@@ -22,6 +20,7 @@ namespace ParaBank_Playwright_DotNet.Pages
 
         public OpenNewAccountPage(IPage page)
         {
+            
             this.page = page;
         }
 
@@ -73,6 +72,8 @@ namespace ParaBank_Playwright_DotNet.Pages
             ExtentReporting.LogInfo("Checking, Congrates message is visible or not");
             LoggerUtil.Info("Checking, Congrates message is visible or not");
 
+            await new BasePage(page).WaitForElement(CongratesMsgLoc);
+
             return await page.Locator(CongratesMsgLoc).IsVisibleAsync();
         }
 
@@ -81,9 +82,11 @@ namespace ParaBank_Playwright_DotNet.Pages
             ExtentReporting.LogInfo("Checking, New Account Id is visible or not");
             LoggerUtil.Info("Checking, New Account Id is visible or not");
 
+            await new BasePage(page).WaitForElement(NewAccIdLoc);
+
             string accNum = await page.Locator(NewAccIdLoc).TextContentAsync() ?? string.Empty;
             LoggerUtil.Info($"New Account Id/Number: {accNum}");
-
+            
             return await page.Locator(NewAccIdLoc).IsVisibleAsync();
         }
     }

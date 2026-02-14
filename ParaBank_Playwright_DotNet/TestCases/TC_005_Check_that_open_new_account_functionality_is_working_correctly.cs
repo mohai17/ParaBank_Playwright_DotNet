@@ -22,6 +22,7 @@ namespace ParaBank_Playwright_DotNet.TestCases
                 string sheetName = "OpenNewAccountData";
                 LoggerUtil.Info($"ExcelPath: {excelpath}");
                 LoggerUtil.Info($"Excel Sheet Name: {sheetName}");
+                ExcelReaderUtil.PopulateInCollection(excelpath, sheetName);
 
                 int rowNumber = Convert.ToInt32(ExcelReaderUtil.ReadData(1,"ConfigRow"));
                 string username = ExcelReaderUtil.ReadData(rowNumber, "Username") ?? string.Empty;
@@ -41,7 +42,14 @@ namespace ParaBank_Playwright_DotNet.TestCases
                 await openAcc.SelectFromAccId(accountID);
                 await openAcc.ClickOnOpenAccountButton();
 
-                bool actualResult = await openAcc.IsNewAccountNumberVisible();
+                bool Result1 = await openAcc.IsCongratsMsgVisible();
+                LoggerUtil.Debug($"Congrats Message:{Result1}");
+
+                bool Result2 = await openAcc.IsNewAccountNumberVisible();
+                LoggerUtil.Debug($"New Account Number:{Result2}");
+                
+                bool actualResult = Result1 && Result2;
+                LoggerUtil.Debug($"Actual Result: {actualResult}");
 
                 Assert.That(actualResult, Is.True);
             }
