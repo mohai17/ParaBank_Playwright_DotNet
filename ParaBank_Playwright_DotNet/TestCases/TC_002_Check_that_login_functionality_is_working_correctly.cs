@@ -18,8 +18,12 @@ internal class TC_002_Check_that_login_functionality_is_working_correctly:BaseTe
 
         try
         {
-            ExcelReaderUtil.PopulateInCollection(excelpath, "RegisterData");
-            var rowNumber = 1;
+            string sheetName = "LoginData";
+            LoggerUtil.Info($"ExcelPath: {excelpath}");
+            LoggerUtil.Info($"Excel Sheet Name: {sheetName}");
+
+            ExcelReaderUtil.PopulateInCollection(excelpath, sheetName);
+            var rowNumber = Convert.ToInt32(ExcelReaderUtil.ReadData(1, "ConfigRow"));
             string username = ExcelReaderUtil.ReadData(rowNumber, "Username") ?? string.Empty;
             string password = ExcelReaderUtil.ReadData(rowNumber, "Password") ?? string.Empty;
 
