@@ -15,7 +15,7 @@ namespace ParaBank_Playwright_DotNet.TestCases
     internal class TC_004_Check_that_find_login_info_functionality_is_working_correctly:BaseTest
     {
 
-        private readonly string excelPath = Paths.DataXLSXPath("ParaBankTestData.xlsx");
+        private readonly string excelpath = Paths.DataXLSXPath("ParaBankTestData.xlsx");
 
         [Test]
         public async Task TS_001_user_wants_to_find_login_info()
@@ -23,10 +23,13 @@ namespace ParaBank_Playwright_DotNet.TestCases
 
             try
             {
-                ExcelReaderUtil.PopulateInCollection(excelPath, "RegisterData");
+                string sheetName = "ForgotLoginInfoData";
+                LoggerUtil.Info($"ExcelPath: {excelpath}");
+                LoggerUtil.Info($"Excel Sheet Name: {sheetName}");
 
-                var rowNumber = 1;
+                ExcelReaderUtil.PopulateInCollection(excelpath, sheetName);
 
+                var rowNumber = Convert.ToInt32(ExcelReaderUtil.ReadData(1, "ConfigRow"));
                 string firstName = ExcelReaderUtil.ReadData(rowNumber, "FirstName") ?? string.Empty;
                 string lastName = ExcelReaderUtil.ReadData(rowNumber, "LastName") ?? string.Empty;
                 string address = ExcelReaderUtil.ReadData(rowNumber, "Address") ?? string.Empty;
@@ -50,8 +53,8 @@ namespace ParaBank_Playwright_DotNet.TestCases
                 await forgot.ClickOnFindButton();
 
 
-                username = "parasoft";
-                password = "demo";
+                //username = "parasoft";
+                //password = "demo";
 
 
                 bool acutalResult = await forgot.IsLoginInfoVisible(username, password);
