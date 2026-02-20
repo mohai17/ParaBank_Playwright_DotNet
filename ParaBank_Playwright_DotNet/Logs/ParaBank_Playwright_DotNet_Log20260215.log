@@ -289,3 +289,21 @@ Call log:
 2026-02-15 01:50:23.608 +06:00 [DBG] New Account Number:True
 2026-02-15 01:50:23.608 +06:00 [DBG] Actual Result: True
 2026-02-15 01:50:28.839 +06:00 [INF] Tear Down and Closing the Driver.
+2026-02-15 01:53:05.836 +06:00 [INF] Browser Setup is started.
+2026-02-15 01:53:09.035 +06:00 [INF] Browser Setup is finished.
+2026-02-15 01:53:09.035 +06:00 [INF] Goto the url:https://parabank.parasoft.com/parabank/index.htm
+2026-02-15 01:53:09.038 +06:00 [INF] ExcelPath: C:\Users\mohai\source\repos\ParaBank_Playwright_DotNet\ParaBank_Playwright_DotNet\Resources/TestData\ParaBankTestData.xlsx
+2026-02-15 01:53:09.038 +06:00 [INF] Excel Sheet Name: ForgotLoginInfoData
+2026-02-15 01:53:09.095 +06:00 [INF] Click on forgot login info link
+2026-02-15 01:53:09.486 +06:00 [INF] Enter first name: Alex
+2026-02-15 01:53:09.561 +06:00 [INF] Enter last name: Carter
+2026-02-15 01:53:09.590 +06:00 [INF] Enter address: 123 Maple Street
+2026-02-15 01:53:09.607 +06:00 [INF] Enter city name: Denver
+2026-02-15 01:53:09.621 +06:00 [INF] Enter state name: CO
+2026-02-15 01:53:09.635 +06:00 [INF] Enter the zip code: 80202
+2026-02-15 01:53:09.648 +06:00 [INF] Enter the SSN: 123-45-6789
+2026-02-15 01:53:09.663 +06:00 [INF] Click on 'Find My Login Info' button
+2026-02-15 01:53:10.018 +06:00 [INF] Checking, Login info is visible or not
+2026-02-15 01:53:11.789 +06:00 [INF] Target page, context or browser has been closed
+Call log:
+  - waiting for Locator("//*[@id=\"rightPanel\"]/p[2]")
