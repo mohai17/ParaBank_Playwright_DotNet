@@ -1,0 +1,79 @@
+2026-02-23 09:49:18.253 +06:00 [INF] Browser Setup is started.
+2026-02-23 09:49:26.440 +06:00 [INF] Browser Setup is finished.
+2026-02-23 09:49:26.441 +06:00 [INF] Goto the url:https://parabank.parasoft.com/parabank/index.htm
+2026-02-23 09:49:26.451 +06:00 [INF] ExcelPath: C:\Users\mohai.islam\source\repos\ParaBank_Playwright_DotNet\ParaBank_Playwright_DotNet\Resources/TestData\ParaBankTestData.xlsx
+2026-02-23 09:49:26.451 +06:00 [INF] Excel Sheet Name: RegisterData
+2026-02-23 09:49:26.522 +06:00 [INF] Click on the registration link.
+2026-02-23 09:49:26.919 +06:00 [INF] Enter the first name: Alex
+2026-02-23 09:49:28.298 +06:00 [INF] Enter the last name: Carter
+2026-02-23 09:49:28.313 +06:00 [INF] Enter the address: 123 Maple Street
+2026-02-23 09:49:28.327 +06:00 [INF] Enter the city: Denver
+2026-02-23 09:49:28.342 +06:00 [INF] Enter the state: CO
+2026-02-23 09:49:28.358 +06:00 [INF] Enter the zip code: 80202
+2026-02-23 09:49:28.370 +06:00 [INF] Enter the phone number: (303) 555-0198
+2026-02-23 09:49:28.383 +06:00 [INF] Enter the SSN: 123-45-6789
+2026-02-23 09:49:28.392 +06:00 [INF] Enter the username: Alex
+2026-02-23 09:49:28.402 +06:00 [INF] Enter the password: Passw0rd!
+2026-02-23 09:49:28.413 +06:00 [INF] Enter the confirm password: Passw0rd!
+2026-02-23 09:49:28.419 +06:00 [INF] Click on the registration button
+2026-02-23 09:49:28.765 +06:00 [INF] Checking, Welcome Message after registration is displaying or not
+2026-02-23 09:49:33.464 +06:00 [INF] Tear Down and Closing the Driver.
+2026-02-23 09:49:34.337 +06:00 [INF] Browser Setup is started.
+2026-02-23 09:49:38.526 +06:00 [INF] Browser Setup is finished.
+2026-02-23 09:49:38.527 +06:00 [INF] Goto the url:https://parabank.parasoft.com/parabank/index.htm
+2026-02-23 09:49:38.528 +06:00 [INF] ExcelPath: C:\Users\mohai.islam\source\repos\ParaBank_Playwright_DotNet\ParaBank_Playwright_DotNet\Resources/TestData\ParaBankTestData.xlsx
+2026-02-23 09:49:38.529 +06:00 [INF] Excel Sheet Name: LoginData
+2026-02-23 09:49:38.534 +06:00 [INF] Enter the username: Alex
+2026-02-23 09:49:38.574 +06:00 [INF] Enter the password: Passw0rd!
+2026-02-23 09:49:38.586 +06:00 [INF] Click on the login button
+2026-02-23 09:49:39.220 +06:00 [INF] Checking, Account Overview Header is displaying or not
+2026-02-23 09:49:39.748 +06:00 [INF] Tear Down and Closing the Driver.
+2026-02-23 09:49:40.052 +06:00 [INF] Browser Setup is started.
+2026-02-23 09:49:44.148 +06:00 [INF] Browser Setup is finished.
+2026-02-23 09:49:44.148 +06:00 [INF] Goto the url:https://parabank.parasoft.com/parabank/index.htm
+2026-02-23 09:49:44.149 +06:00 [INF] ExcelPath: C:\Users\mohai.islam\source\repos\ParaBank_Playwright_DotNet\ParaBank_Playwright_DotNet\Resources/TestData\ParaBankTestData.xlsx
+2026-02-23 09:49:44.150 +06:00 [INF] Excel Sheet Name: LogoutData
+2026-02-23 09:49:44.165 +06:00 [INF] Enter the username: Alex
+2026-02-23 09:49:44.197 +06:00 [INF] Enter the password: Passw0rd!
+2026-02-23 09:49:44.207 +06:00 [INF] Click on the login button
+2026-02-23 09:49:44.977 +06:00 [INF] Click on the logout link
+2026-02-23 09:49:45.540 +06:00 [INF] Checking, Customer Login Header is visible or not.
+2026-02-23 09:49:45.887 +06:00 [INF] Tear Down and Closing the Driver.
+2026-02-23 09:49:46.162 +06:00 [INF] Browser Setup is started.
+2026-02-23 09:49:52.905 +06:00 [INF] Browser Setup is finished.
+2026-02-23 09:49:52.905 +06:00 [INF] Goto the url:https://parabank.parasoft.com/parabank/index.htm
+2026-02-23 09:49:52.909 +06:00 [INF] ExcelPath: C:\Users\mohai.islam\source\repos\ParaBank_Playwright_DotNet\ParaBank_Playwright_DotNet\Resources/TestData\ParaBankTestData.xlsx
+2026-02-23 09:49:52.909 +06:00 [INF] Excel Sheet Name: ForgotLoginInfoData
+2026-02-23 09:49:52.919 +06:00 [INF] Click on forgot login info link
+2026-02-23 09:49:54.175 +06:00 [INF] Enter first name: Alex
+2026-02-23 09:49:54.301 +06:00 [INF] Enter last name: Carter
+2026-02-23 09:49:54.329 +06:00 [INF] Enter address: 123 Maple Street
+2026-02-23 09:49:54.344 +06:00 [INF] Enter city name: Denver
+2026-02-23 09:49:54.359 +06:00 [INF] Enter state name: CO
+2026-02-23 09:49:54.373 +06:00 [INF] Enter the zip code: 80202
+2026-02-23 09:49:54.390 +06:00 [INF] Enter the SSN: 123-45-6789
+2026-02-23 09:49:54.404 +06:00 [INF] Click on 'Find My Login Info' button
+2026-02-23 09:49:54.744 +06:00 [INF] Checking, Login info is visible or not
+2026-02-23 09:50:24.758 +06:00 [INF] Timeout 30000ms exceeded.
+Call log:
+  - waiting for Locator("//*[@id=\"rightPanel\"]/p[2]")
+2026-02-23 09:50:24.906 +06:00 [INF] Tear Down and Closing the Driver.
+2026-02-23 09:50:25.507 +06:00 [INF] Browser Setup is started.
+2026-02-23 09:50:31.462 +06:00 [INF] Browser Setup is finished.
+2026-02-23 09:50:31.462 +06:00 [INF] Goto the url:https://parabank.parasoft.com/parabank/index.htm
+2026-02-23 09:50:31.465 +06:00 [INF] ExcelPath: C:\Users\mohai.islam\source\repos\ParaBank_Playwright_DotNet\ParaBank_Playwright_DotNet\Resources/TestData\ParaBankTestData.xlsx
+2026-02-23 09:50:31.465 +06:00 [INF] Excel Sheet Name: OpenNewAccountData
+2026-02-23 09:50:31.472 +06:00 [INF] Enter the username: Alex
+2026-02-23 09:50:31.512 +06:00 [INF] Enter the password: Passw0rd!
+2026-02-23 09:50:31.524 +06:00 [INF] Click on the login button
+2026-02-23 09:50:32.577 +06:00 [INF] Click on Open New Account Link
+2026-02-23 09:50:33.105 +06:00 [INF] Select the account type: SAVINGS
+2026-02-23 09:50:33.133 +06:00 [INF] Select From Account ID: 0
+2026-02-23 09:50:33.387 +06:00 [INF] Click on open account button
+2026-02-23 09:50:33.431 +06:00 [INF] Checking, Congrates message is visible or not
+2026-02-23 09:50:33.762 +06:00 [DBG] Congrats Message:True
+2026-02-23 09:50:33.763 +06:00 [INF] Checking, New Account Id is visible or not
+2026-02-23 09:50:33.772 +06:00 [INF] New Account Id/Number: 15009
+2026-02-23 09:50:33.775 +06:00 [DBG] New Account Number:True
+2026-02-23 09:50:33.775 +06:00 [DBG] Actual Result: True
+2026-02-23 09:50:33.909 +06:00 [INF] Tear Down and Closing the Driver.
